@@ -9,14 +9,15 @@ if (num < 100)
 {
     Console.WriteLine("Третьей цифры нет");
 }
-if(num < 1000)
+if (num < 1000)
 {
-   Console.WriteLine(num / 10 % 10);
+    Console.WriteLine(num / 10 % 10);
 }
 else
 {
-    while(num < 1000)
+    while (num > 1000)
     {
-        num = num % 10;
+        num = num / 10;
     }
+    Console.WriteLine(num % 10);
 }
