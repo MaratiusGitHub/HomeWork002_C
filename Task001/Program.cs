@@ -6,7 +6,11 @@
 
 Console.WriteLine("Введите любое трехзначное число");
 int num = Convert.ToInt32(Console.ReadLine());
-if (99 < num & num <1000) 
+if(num < 0) 
+{
+    num = num * -1;
+}
+if(99 < num & num <1000) 
 {
     Console.WriteLine($"Вторая цифра этого числа {num / 10 % 10}");
 }
