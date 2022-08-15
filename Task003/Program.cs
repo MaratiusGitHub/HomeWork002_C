@@ -4,17 +4,32 @@
 //1 -> нет
 
 
+void day(int number)
+{
+    switch (number)
+    {
+        case 1: Console.WriteLine("Понедельник - рабочий день"); break;
+        case 2: Console.WriteLine("Вторник - рабочий день"); break;
+        case 3: Console.WriteLine("Среда - рабочий день"); break;
+        case 4: Console.WriteLine("Четверг - рабочий день"); break;
+        case 5: Console.WriteLine("Пятница - рабочий день"); break;
+        case 6: Console.WriteLine("Суббота - выходной день"); break;
+        case 7: Console.WriteLine("Воскреснье - выходной день"); break;
+    }
+}
+
 Console.WriteLine("Введите цифру, обозначающую день недели");
 int num = Convert.ToInt32(Console.ReadLine());
 
-switch (num)
+if (num < 8)
 {
-    case 1: Console.WriteLine("Понедельник"); break;
-    case 2: Console.WriteLine("Вторник"); break;
-    case 3: Console.WriteLine("Среда"); break;
-    case 4: Console.WriteLine("Четверг"); break;
-    case 5: Console.WriteLine("Пятница"); break;
-    case 6: Console.WriteLine("Суббота"); break;
-    case 7: Console.WriteLine("Воскреснье"); break;
-    default: Console.WriteLine("Неверное число"); break;
+    day(num);
+}
+else
+{
+    while (num > 7)
+    {
+        num = num - 7;
+    }
+    day(num);
 }
